@@ -11,3 +11,7 @@ rule {
     label_values = true
   }
 }
+
+ci {
+  include = [ "rules/.*yaml" ]
+}
