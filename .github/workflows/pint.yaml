@@ -25,6 +25,5 @@ jobs:
         uses: wbollock/pint-action@v1.0.7
         with:
           token: ${{ github.token }}
-          workdir: 'rules'
           pr_target_repo: ${{ github.event.pull_request.base.repo.full_name }}
           pr_source_repo: ${{ github.event.pull_request.head.repo.full_name }}
