@@ -4,7 +4,7 @@ groups:
   - alert: "ICMPDown"
     annotations:
       description: "IPv4 ICMP probes have been failing on {{ $labels.instance }} for 5 minutes"
-    expr: "max_over_time(probe_success{job='blackbox_icmp', environment='production', component='test'}[5m]) != 1"
+    expr: "max_over_time(probe_success{job='blackbox_icmp', environment='production', component='test', badlabel3='https://plants.com' }[5m]) != 1"
     for: "5m"
     labels:
       component: "test"
